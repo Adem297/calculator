@@ -102,3 +102,14 @@ function clearCalculator() {
 const clearButton = document.querySelector(".clear");
 clearButton.addEventListener("click", clearCalculator);
 
+function backspace() {
+  if (display.textContent.length === 1) {
+    updateDisplay("0");
+  } else {
+    updateDisplay(display.textContent.slice(0, -1));
+  }
+}
+
+const backspaceButton = document.querySelector(".backspace");
+backspaceButton.addEventListener("click", backspace);
+
